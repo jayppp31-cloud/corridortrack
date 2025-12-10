@@ -1,482 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CorridorTrack — Track Containers from Jebel Ali to Nairobi</title>
-  <meta name="description" content="Track containers from Jebel Ali to Mombasa to Nairobi. Predict delays, avoid demurrage and get WhatsApp updates — no signup required.">
+  <meta charset="UTF-8" />
+  <title>CorridorTrack – East Africa Corridor Cargo Tracking Specialists</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Track containers from Jebel Ali to Mombasa to Nairobi. Predict delays, avoid demurrage and get WhatsApp-style updates – with no signup required." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <div class="top-bar-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>+1 830 347 1604</span>
+  <div class="page">
+    <header class="site-header">
+      <div class="logo-row">
+        <div class="logo-mark">
+          <span class="logo-letter">CT</span>
+        </div>
+        <div class="logo-text">
+          Corridor<span>Track</span>
+        </div>
       </div>
-      <div class="top-bar-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>Nairobi, Kenya</span>
-      </div>
-    </div>
-    <div class="top-bar-right">
-      <button class="lang-btn">EN</button>
-      <button class="lang-btn">SW</button>
-    </div>
+      <nav class="nav-actions">
+        <span class="nav-pill nav-pill--muted">No signup required</span>
+        <a href="#pricing" class="nav-pill">Pricing</a>
+        <a href="#whatsapp" class="nav-pill nav-pill--primary">Start on WhatsApp</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <p class="eyebrow">The East Africa Corridor Cargo Tracking Specialists</p>
+          <h1>Deliver containers. <br />Predict delays. <br />Stop port chaos.</h1>
+          <p class="hero-subtitle">
+            Track your shipment from <strong>Jebel Ali</strong> to <strong>Mombasa</strong> to
+            <strong>Nairobi</strong>. Live checkpoints, held‑cargo alerts and WhatsApp‑style updates —
+            built only for the East African corridor.
+          </p>
+
+          <form class="track-form" id="trackForm">
+            <label class="track-label" for="trackingInput">Track your shipment</label>
+            <div class="track-input-row">
+              <input
+                id="trackingInput"
+                name="tracking"
+                type="text"
+                placeholder="Enter bill of lading or container number"
+                autocomplete="off"
+                required
+              />
+              <button type="submit">Track Cargo</button>
+            </div>
+            <p class="track-helper">No signup • Works via WhatsApp • BL &amp; container numbers accepted</p>
+          </form>
+
+          <button class="secondary-cta" type="button" id="whereBtn">
+            <span class="secondary-cta-icon">💬</span>
+            Where is my container?
+          </button>
+
+          <div class="hero-payments">
+            <span class="payments-label">Pay instantly in:</span>
+            <span class="payments-pill">BTC</span>
+            <span class="payments-pill">ETH</span>
+            <span class="payments-pill">XMR</span>
+            <span class="payments-pill">VISA</span>
+          </div>
+
+          <div class="hero-social-proof">
+            <p>Trusted by forwarders, clearing agents &amp; transporters across East Africa.</p>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-map-card">
+            <header class="map-card-header">
+              <div>
+                <p class="map-card-title">Jebel Ali → Mombasa → Nairobi</p>
+                <p class="map-card-sub">Live corridor view · Port · Customs · SGR · Road</p>
+              </div>
+              <span class="map-pill">Delay risk 31%</span>
+            </header>
+
+            <div class="map-body">
+              <div class="map-graphic">
+                <div class="map-route">
+                  <div class="map-stop">
+                    <span class="dot dot--active"></span>
+                    <span class="stop-label">PORT</span>
+                  </div>
+                  <div class="map-stop">
+                    <span class="dot"></span>
+                    <span class="stop-label">CUSTOMS</span>
+                  </div>
+                  <div class="map-stop">
+                    <span class="dot"></span>
+                    <span class="stop-label">SGR</span>
+                  </div>
+                  <div class="map-stop">
+                    <span class="dot"></span>
+                    <span class="stop-label">ROAD</span>
+                  </div>
+                </div>
+                <div class="map-africa-hint">East Africa corridor map placeholder</div>
+              </div>
+
+              <div class="map-chat">
+                <p class="map-chat-label">Live WhatsApp-style update</p>
+                <div class="map-chat-bubble">
+                  <p>
+                    MSCU1234567 left <strong>Jebel Ali</strong> on <strong>3 Apr</strong>, estimated to arrive in
+                    <strong>Mombasa</strong> on <strong>23 Apr</strong>. Customs docs ✅ — no holds expected.
+                  </p>
+                  <span class="map-chat-time">09:00</span>
+                </div>
+              </div>
+            </div>
+
+            <footer class="map-footer">
+              <div class="map-footer-item">
+                <span class="dot dot--small dot--danger"></span>
+                <span>Demurrage risk detected at Mombasa</span>
+              </div>
+              <div class="map-footer-item">
+                <span class="dot dot--small dot--success"></span>
+                <span>Pre‑clearance docs ready</span>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section features">
+        <div class="section-header">
+          <h2>Everything in one place.</h2>
+          <p>Live vessel, port, SGR &amp; truck intelligence — streamed into WhatsApp and the CorridorTrack dashboard.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>WhatsApp‑first tracking</h3>
+            <p>Clients send a container number. You forward to CorridorTrack. We handle the rest — status, ETA and risk score back in seconds.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Predictive ETA &amp; delay risk</h3>
+            <p>We blend carrier data, port congestion, SGR schedules and truck telemetry to forecast arrival and flag risk before it becomes demurrage.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Customs &amp; compliance engine</h3>
+            <p>BL and invoice checks for HS codes, values and document gaps — tuned to Kenya &amp; East Africa rules.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Control Tower dashboard</h3>
+            <p>See every container on one map. Sort by risk, arrival date or client. Share a clean view with your customers in one click.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRICING STRIP -->
+      <section class="section pricing" id="pricing">
+        <div class="pricing-inner">
+          <div class="pricing-copy">
+            <h2>One prevented delay pays for months of CorridorTrack.</h2>
+            <p>Demurrage at Mombasa can cost <strong>$150–300 per day</strong>. CorridorTrack alerts you before containers get stuck.</p>
+          </div>
+          <div class="pricing-tiers">
+            <div class="pricing-pill">
+              <p class="pricing-name">Free</p>
+              <p class="pricing-price">$0</p>
+              <p class="pricing-note">Test the corridor intelligence. 3 containers, WhatsApp updates included.</p>
+            </div>
+            <div class="pricing-pill pricing-pill--highlight">
+              <p class="pricing-name">Ops</p>
+              <p class="pricing-price">$29</p>
+              <p class="pricing-note">For active forwarders. Unlimited containers, delay risk, morning briefings.</p>
+            </div>
+            <div class="pricing-pill">
+              <p class="pricing-name">Control Tower</p>
+              <p class="pricing-price">$99</p>
+              <p class="pricing-note">For enterprises. Multi‑team dashboard, customs analytics and API.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHATSAPP CTA -->
+      <section class="section whatsapp-cta" id="whatsapp">
+        <div class="whatsapp-inner">
+          <div>
+            <h2>Start with one container.</h2>
+            <p>Send us a BL or container number on WhatsApp. We'll show you the live status, ETA and delay risk — no signup, no training.</p>
+          </div>
+          <a class="whatsapp-button" id="whatsappButton" href="#" target="_blank" rel="noopener">
+            Start on WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 CorridorTrack. Built for the Jebel Ali → Mombasa → Nairobi corridor.</p>
+    </footer>
   </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-inner">
-      <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <line x1="3" y1="9" x2="21" y2="9"/>
-            <line x1="9" y1="21" x2="9" y2="9"/>
-          </svg>
-        </div>
-        <span class="logo-text">Corridor<span>Track</span></span>
-      </div>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#" class="nav-cta" id="whatsappButton">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-          Track on WhatsApp
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          Tracking containers across East Africa
-        </div>
-
-        <h1>
-          Track Your Containers.<br>
-          <span>Jebel Ali to Nairobi.</span>
-        </h1>
-
-        <p class="hero-sub">
-          We scan your cargo journey like a CT scan — every checkpoint, every risk, from Jebel Ali to Nairobi. Get instant WhatsApp alerts when something changes. Container stuck? We'll help you sort it.
-        </p>
-
-        <!-- TRACKING FORM - Wired to WhatsApp -->
-        <form class="track-form" id="trackForm">
-          <label class="track-label" for="trackingInput">Track your shipment</label>
-          <div class="track-input-row">
-            <input
-              id="trackingInput"
-              name="tracking"
-              type="text"
-              placeholder="Enter B/L or container number"
-              autocomplete="off"
-              required
-            >
-            <button type="submit">Track Cargo</button>
-          </div>
-          <p class="track-helper">No signup • Works via WhatsApp • BL & container numbers accepted</p>
-        </form>
-
-        <button class="secondary-cta" type="button" id="whereBtn">
-          <span class="secondary-cta-icon">💬</span>
-          Where is my container?
-        </button>
-
-        <div class="trust-row">
-          <div class="trust-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Nairobi Based
-          </div>
-          <div class="trust-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            2,400+ Containers Tracked
-          </div>
-          <div class="trust-badge">
-            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="#1a472a" stroke-width="2" fill="none"/></svg>
-            Real-time Updates
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <!-- SVG Map - Realistic Africa outline -->
-        <svg class="hero-map" viewBox="0 0 450 550" fill="none">
-          <!-- Ocean -->
-          <rect width="450" height="550" fill="#1e5a54"/>
-          
-          <!-- Africa continent -->
-          <path d="
-            M 145 25
-            C 155 20, 175 15, 195 12
-            C 220 8, 250 10, 275 18
-            C 300 26, 320 40, 338 58
-            C 355 75, 368 95, 378 118
-            C 388 142, 395 168, 398 195
-            C 401 222, 400 250, 395 275
-            L 398 278
-            C 408 285, 420 295, 428 310
-            C 438 328, 442 350, 438 372
-            C 434 394, 422 415, 405 432
-            C 388 449, 368 462, 345 472
-            L 340 485
-            C 335 498, 325 510, 312 518
-            C 298 527, 282 532, 265 535
-            C 248 538, 230 538, 212 535
-            C 194 532, 177 526, 162 517
-            C 147 508, 134 496, 124 482
-            C 114 468, 107 452, 102 435
-            C 97 418, 95 400, 95 382
-            C 95 364, 98 346, 103 328
-            C 108 310, 116 293, 125 277
-            C 134 261, 145 246, 155 232
-            C 148 218, 142 203, 138 188
-            C 134 173, 132 157, 132 142
-            C 132 127, 135 112, 140 98
-            C 145 84, 152 71, 162 60
-            C 172 49, 184 40, 198 34
-            C 178 32, 160 28, 145 25
-            Z
-          " fill="#2d7a65" stroke="#4a9a80" stroke-width="2"/>
-          
-          <!-- Horn of Africa -->
-          <path d="
-            M 398 195
-            C 405 190, 415 188, 425 192
-            C 435 196, 442 205, 445 218
-            C 448 232, 446 248, 440 265
-            C 434 282, 424 298, 412 312
-            C 400 326, 386 338, 372 348
-            C 365 340, 360 330, 358 318
-            C 356 306, 358 293, 362 280
-            C 366 267, 372 255, 380 244
-            C 388 233, 395 222, 398 210
-            C 400 202, 400 197, 398 195
-            Z
-          " fill="#2d7a65" stroke="#4a9a80" stroke-width="2"/>
-          
-          <!-- Arabian Peninsula -->
-          <path d="
-            M 320 8
-            C 345 2, 375 5, 398 18
-            C 415 28, 428 45, 432 65
-            C 436 85, 430 108, 415 125
-            C 400 142, 378 152, 355 155
-            C 340 157, 325 154, 312 148
-            C 318 130, 322 110, 323 90
-            C 324 70, 322 50, 318 32
-            C 318 22, 319 12, 320 8
-            Z
-          " fill="#256b55" stroke="#4a9a80" stroke-width="1.5" opacity="0.85"/>
-          
-          <!-- Red Sea hint -->
-          <path d="M 290 45 Q 295 80, 300 115 Q 305 150, 315 180" 
-                stroke="#1a5248" stroke-width="8" fill="none" stroke-linecap="round"/>
-          
-          <!-- Madagascar -->
-          <path d="
-            M 405 385
-            C 418 375, 432 380, 440 395
-            C 448 412, 450 435, 445 458
-            C 440 481, 428 502, 412 515
-            C 396 528, 378 532, 365 522
-            C 352 512, 350 492, 355 470
-            C 360 448, 372 428, 388 410
-            C 395 400, 400 390, 405 385
-            Z
-          " fill="#256b55" stroke="#4a9a80" stroke-width="1.5" opacity="0.7"/>
-          
-          <!-- Lake Victoria hint -->
-          <ellipse cx="280" cy="320" rx="25" ry="20" fill="#1a5248" opacity="0.5"/>
-          
-          <!-- Route line -->
-          <path d="
-            M 385 55
-            Q 370 100, 365 145
-            Q 360 190, 372 235
-            Q 382 270, 365 310
-            Q 348 350, 315 390
-            Q 285 425, 250 455
-          " stroke="rgba(255,255,255,0.9)" stroke-width="3" stroke-dasharray="10 6" fill="none" stroke-linecap="round"/>
-          
-          <!-- Waypoint 1: Jebel Ali -->
-          <g>
-            <circle cx="385" cy="55" r="8" fill="white"/>
-            <circle cx="385" cy="55" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-            <text x="330" y="42" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Jebel Ali</text>
-          </g>
-          
-          <!-- Waypoint 2: Mombasa Port -->
-          <g>
-            <circle cx="372" cy="255" r="8" fill="white"/>
-            <circle cx="372" cy="255" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-            <g transform="translate(382, 243)">
-              <rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-              <path d="M 8 10 L 14 6 L 20 10 L 20 20 L 8 20 Z" fill="none" stroke="white" stroke-width="1.5"/>
-            </g>
-            <text x="265" y="260" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Mombasa Port</text>
-          </g>
-          
-          <!-- Waypoint 3: Customs -->
-          <g>
-            <circle cx="352" cy="328" r="8" fill="white"/>
-            <circle cx="352" cy="328" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-            <g transform="translate(362, 316)">
-              <rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-              <circle cx="14" cy="10" r="4" fill="none" stroke="white" stroke-width="1.5"/>
-              <path d="M 8 24 L 8 18 Q 8 14 14 14 Q 20 14 20 18 L 20 24" fill="none" stroke="white" stroke-width="1.5"/>
-            </g>
-            <text x="275" y="333" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Customs</text>
-          </g>
-          
-          <!-- Waypoint 4: Nairobi ICD -->
-          <g>
-            <circle cx="305" cy="398" r="8" fill="white"/>
-            <circle cx="305" cy="398" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-            <g transform="translate(315, 386)">
-              <rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-              <rect x="6" y="14" width="16" height="10" fill="none" stroke="white" stroke-width="1.5"/>
-              <path d="M 4 14 L 14 6 L 24 14" fill="none" stroke="white" stroke-width="1.5"/>
-            </g>
-            <text x="205" y="403" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Nairobi ICD</text>
-          </g>
-          
-          <!-- Waypoint 5: Road -->
-          <g>
-            <circle cx="250" cy="455" r="8" fill="white"/>
-            <circle cx="250" cy="455" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-            <g transform="translate(260, 443)">
-              <rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-              <rect x="5" y="12" width="10" height="8" fill="none" stroke="white" stroke-width="1.5" rx="1"/>
-              <path d="M 15 14 L 19 14 L 22 17 L 22 20 L 15 20" fill="none" stroke="white" stroke-width="1.5"/>
-              <circle cx="8" cy="20" r="2" fill="white"/>
-              <circle cx="19" cy="20" r="2" fill="white"/>
-            </g>
-            <text x="185" y="460" fill="white" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600">Road</text>
-          </g>
-          
-          <!-- Port cranes -->
-          <g transform="translate(330, 265)" opacity="0.35">
-            <rect x="0" y="25" width="45" height="3" fill="white"/>
-            <rect x="8" y="0" width="3" height="28" fill="white"/>
-            <rect x="20" y="5" width="3" height="23" fill="white"/>
-            <rect x="32" y="3" width="3" height="25" fill="white"/>
-            <path d="M 9 0 L 22 0" stroke="white" stroke-width="2"/>
-            <path d="M 21 5 L 34 5" stroke="white" stroke-width="2"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAYMENT METHODS -->
-  <div class="payment-strip">
-    <div class="payment-inner">
-      <span class="payment-label">Pay with:</span>
-      <div class="payment-methods">
-        <div class="payment-method mpesa">
-          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-          M-Pesa
-        </div>
-        <div class="payment-method">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          Card
-        </div>
-        <div class="payment-method">BTC</div>
-        <div class="payment-method">ETH</div>
-        <div class="payment-method">XMR</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="features">
-    <div class="section-container">
-      <div class="section-header">
-        <h2>How It <span>Works</span></h2>
-        <p>Start tracking in under 30 seconds</p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Send Container Number</h3>
-          <p>WhatsApp us your B/L or container number. No signup needed.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Get Instant Location</h3>
-          <p>We tell you exactly where your container is and when it will arrive.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Receive Alerts</h3>
-          <p>Get notified on WhatsApp when your container moves or if there's a delay.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="section-container">
-      <div class="section-header">
-        <h2>Why <span>CorridorTrack</span>?</h2>
-        <p>Built for East African importers and freight teams</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="feature-content">
-            <h3>Real-time Tracking</h3>
-            <p>Know exactly where your container is — from Jebel Ali to your warehouse door.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon green">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </div>
-          <div class="feature-content">
-            <h3>WhatsApp Updates</h3>
-            <p>No apps to download. No portals to check. Just send a message and get answers.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <div class="feature-content">
-            <h3>Delay Alerts</h3>
-            <p>Know about customs holds, port delays, or SGR issues before they cost you money.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon green">
-            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <div class="feature-content">
-            <h3>Unstick Your Cargo</h3>
-            <p>Container stuck at customs? We'll help you figure out what's wrong and get it moving.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="section-container">
-      <div class="section-header">
-        <h2>Simple <span>Pricing</span></h2>
-        <p>One demurrage bill costs more than a year of CorridorTrack</p>
-      </div>
-
-      <div class="pricing-grid">
-        <div class="price-card">
-          <div class="price-name">Free</div>
-          <div class="price-amount"><span class="price-currency">$</span>0</div>
-          <div class="price-period">forever</div>
-          <button class="price-btn secondary">Start Free</button>
-          <ul class="price-features">
-            <li>Up to 3 containers</li>
-            <li>Basic status updates</li>
-            <li>WhatsApp tracking</li>
-          </ul>
-        </div>
-
-        <div class="price-card featured">
-          <div class="price-name">Ops</div>
-          <div class="price-amount"><span class="price-currency">$</span>29</div>
-          <div class="price-period">/month</div>
-          <button class="price-btn primary">Get Ops</button>
-          <ul class="price-features">
-            <li>Unlimited containers</li>
-            <li>Predictive delay alerts</li>
-            <li>Morning briefings</li>
-            <li>Priority support</li>
-          </ul>
-        </div>
-
-        <div class="price-card">
-          <div class="price-name">Control Tower</div>
-          <div class="price-amount"><span class="price-currency">$</span>99</div>
-          <div class="price-period">/month</div>
-          <button class="price-btn secondary">Contact Us</button>
-          <ul class="price-features">
-            <li>Everything in Ops</li>
-            <li>Multi-team dashboard</li>
-            <li>Customs analytics</li>
-            <li>API access</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="whatsapp">
-    <h2>Ready to Track Your <span>Cargo</span>?</h2>
-    <p>Send us a container number on WhatsApp. We'll tell you exactly where it is.</p>
-    <a href="#" class="whatsapp-cta-btn" id="whatsappButtonFooter">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-      Track on WhatsApp
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <line x1="3" y1="9" x2="21" y2="9"/>
-              <line x1="9" y1="21" x2="9" y2="9"/>
-            </svg>
-          </div>
-          <span class="logo-text">Corridor<span>Track</span></span>
-        </div>
-        <p>Tracking containers on the Jebel Ali – Mombasa – Nairobi corridor. Built in Nairobi for East African businesses.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="tel:+18303471604">+1 830 347 1604</a>
-        <a href="#" id="whatsappFooterLink">WhatsApp</a>
-        <a href="mailto:hello@corridortrack.com">hello@corridortrack.com</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#">Privacy Policy</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © 2025 CorridorTrack — Built for the Jebel Ali → Mombasa → Nairobi corridor.
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
