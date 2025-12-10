@@ -1,208 +1,274 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CorridorTrack – East Africa Corridor Cargo Tracking Specialists</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Track containers from Jebel Ali to Mombasa to Nairobi. Predict delays, avoid demurrage and get WhatsApp-style updates – with no signup required." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CorridorTrack – Freight tracking for East Africa</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="page">
-    <header class="site-header">
-      <div class="logo-row">
-        <div class="logo-mark">
-          <span class="logo-letter">CT</span>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <div class="logo-box">CT</div>
+          <span class="logo-text">CorridorTrack</span>
         </div>
-        <div class="logo-text">
-          Corridor<span>Track</span>
+
+        <div class="topbar-right">
+          <span class="pill muted">No signup required</span>
+          <button class="pill link" onclick="scrollToPricing()">Pricing</button>
+          <a
+            href="#"
+            class="btn-whatsapp"
+            id="whatsappTop"
+            >Start on WhatsApp</a
+          >
         </div>
       </div>
-      <nav class="nav-actions">
-        <span class="nav-pill nav-pill--muted">No signup required</span>
-        <a href="#pricing" class="nav-pill">Pricing</a>
-        <a href="#whatsapp" class="nav-pill nav-pill--primary">Start on WhatsApp</a>
-      </nav>
     </header>
 
     <main>
+
       <!-- HERO -->
       <section class="hero">
-        <div class="hero-left">
-          <p class="eyebrow">The East Africa Corridor Cargo Tracking Specialists</p>
-          <h1>Deliver containers. <br />Predict delays. <br />Stop port chaos.</h1>
-          <p class="hero-subtitle">
-            Track your shipment from <strong>Jebel Ali</strong> to <strong>Mombasa</strong> to
-            <strong>Nairobi</strong>. Live checkpoints, held‑cargo alerts and WhatsApp‑style updates —
-            built only for the East African corridor.
-          </p>
+        <div class="hero-inner">
 
-          <form class="track-form" id="trackForm">
-            <label class="track-label" for="trackingInput">Track your shipment</label>
+          <!-- LEFT -->
+          <div class="hero-left">
+            <p class="eyebrow">
+              The East Africa corridor cargo tracking specialists
+            </p>
+
+            <h1 class="hero-title">
+              Deliver containers.<br />
+              Predict delays.<br />
+              Stop port chaos.
+            </h1>
+
+            <p class="hero-sub">
+              Track your shipment from Jebel Ali to Mombasa to Nairobi.
+              Live checkpoints, WhatsApp-style updates and delay-risk alerts
+              built for East African freight forwarders.
+            </p>
+
             <div class="track-input-row">
               <input
-                id="trackingInput"
-                name="tracking"
                 type="text"
+                id="trackingInput"
                 placeholder="Enter bill of lading or container number"
-                autocomplete="off"
-                required
               />
-              <button type="submit">Track Cargo</button>
-            </div>
-            <p class="track-helper">No signup • Works via WhatsApp • BL &amp; container numbers accepted</p>
-          </form>
-
-          <button class="secondary-cta" type="button" id="whereBtn">
-            <span class="secondary-cta-icon">💬</span>
-            Where is my container?
-          </button>
-
-          <div class="hero-payments">
-            <span class="payments-label">Pay instantly in:</span>
-            <span class="payments-pill">BTC</span>
-            <span class="payments-pill">ETH</span>
-            <span class="payments-pill">XMR</span>
-            <span class="payments-pill">VISA</span>
-          </div>
-
-          <div class="hero-social-proof">
-            <p>Trusted by forwarders, clearing agents &amp; transporters across East Africa.</p>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-map-card">
-            <header class="map-card-header">
-              <div>
-                <p class="map-card-title">Jebel Ali → Mombasa → Nairobi</p>
-                <p class="map-card-sub">Live corridor view · Port · Customs · SGR · Road</p>
-              </div>
-              <span class="map-pill">Delay risk 31%</span>
-            </header>
-
-            <div class="map-body">
-              <div class="map-graphic">
-                <div class="map-route">
-                  <div class="map-stop">
-                    <span class="dot dot--active"></span>
-                    <span class="stop-label">PORT</span>
-                  </div>
-                  <div class="map-stop">
-                    <span class="dot"></span>
-                    <span class="stop-label">CUSTOMS</span>
-                  </div>
-                  <div class="map-stop">
-                    <span class="dot"></span>
-                    <span class="stop-label">SGR</span>
-                  </div>
-                  <div class="map-stop">
-                    <span class="dot"></span>
-                    <span class="stop-label">ROAD</span>
-                  </div>
-                </div>
-                <div class="map-africa-hint">East Africa corridor map placeholder</div>
-              </div>
-
-              <div class="map-chat">
-                <p class="map-chat-label">Live WhatsApp-style update</p>
-                <div class="map-chat-bubble">
-                  <p>
-                    MSCU1234567 left <strong>Jebel Ali</strong> on <strong>3 Apr</strong>, estimated to arrive in
-                    <strong>Mombasa</strong> on <strong>23 Apr</strong>. Customs docs ✅ — no holds expected.
-                  </p>
-                  <span class="map-chat-time">09:00</span>
-                </div>
-              </div>
+              <button onclick="trackCargo()">Track Cargo</button>
             </div>
 
-            <footer class="map-footer">
-              <div class="map-footer-item">
-                <span class="dot dot--small dot--danger"></span>
-                <span>Demurrage risk detected at Mombasa</span>
+            <div class="hero-payline">
+              Pay instantly in:
+              <span class="chip">BTC</span>
+              <span class="chip">ETH</span>
+              <span class="chip">XMR</span>
+              <span class="chip">VISA</span>
+            </div>
+
+            <!-- WhatsApp-style bubbles -->
+            <div class="bubble-row">
+              <div class="bubble-question">Where is my container?</div>
+            </div>
+
+            <div class="bubble-row right">
+              <div class="bubble-answer">
+                MSC Example 1294567 left Jebel Ali on 3 Apr,
+                estimated to arrive in Mombasa on 23 Apr.
+                <div class="time">9:00</div>
               </div>
-              <div class="map-footer-item">
-                <span class="dot dot--small dot--success"></span>
-                <span>Pre‑clearance docs ready</span>
+            </div>
+          </div>
+
+          <!-- RIGHT – Map + route -->
+          <div class="hero-right">
+            <!-- Background map image -->
+            <div class="map-wrapper">
+              <!-- Replace map.png with your own art -->
+              <img src="map.png" class="map-img" alt="East Africa corridor map" />
+
+              <!-- vertical route line -->
+              <div class="route-line"></div>
+
+              <!-- checkpoints -->
+              <div class="checkpoint" style="top: 18%;">
+                <span class="checkpoint-dot"></span>
+                <span class="checkpoint-label">PORT</span>
               </div>
-            </footer>
+
+              <div class="checkpoint" style="top: 38%;">
+                <span class="checkpoint-dot"></span>
+                <span class="checkpoint-label">CUSTOMS</span>
+              </div>
+
+              <div class="checkpoint" style="top: 58%;">
+                <span class="checkpoint-dot"></span>
+                <span class="checkpoint-label">SGR</span>
+              </div>
+
+              <div class="checkpoint" style="top: 78%;">
+                <span class="checkpoint-dot"></span>
+                <span class="checkpoint-label">ROAD</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- FEATURES -->
-      <section class="section features">
-        <div class="section-header">
-          <h2>Everything in one place.</h2>
-          <p>Live vessel, port, SGR &amp; truck intelligence — streamed into WhatsApp and the CorridorTrack dashboard.</p>
-        </div>
-        <div class="features-grid">
-          <article class="feature-card">
-            <h3>WhatsApp‑first tracking</h3>
-            <p>Clients send a container number. You forward to CorridorTrack. We handle the rest — status, ETA and risk score back in seconds.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Predictive ETA &amp; delay risk</h3>
-            <p>We blend carrier data, port congestion, SGR schedules and truck telemetry to forecast arrival and flag risk before it becomes demurrage.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Customs &amp; compliance engine</h3>
-            <p>BL and invoice checks for HS codes, values and document gaps — tuned to Kenya &amp; East Africa rules.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Control Tower dashboard</h3>
-            <p>See every container on one map. Sort by risk, arrival date or client. Share a clean view with your customers in one click.</p>
-          </article>
+      <section class="section section-features">
+        <div class="section-inner">
+          <h2 class="section-title">Everything in one place.</h2>
+          <p class="section-sub">
+            Live vessel, port, SGR & truck intelligence — streamed into WhatsApp
+            and the CorridorTrack dashboard.
+          </p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>WhatsApp-first tracking</h3>
+              <p>
+                Clients send a container number. We return a CorridorTrack live
+                view showing the real-time status, ETA and risk score back in
+                seconds.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h3>Predictive ETA & delay risk</h3>
+              <p>
+                We blend carrier data, port congestion, seasonal patterns and
+                truck transit history to generate a live ETA and demurrage risk
+                alert before delays become expensive.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h3>Customs & compliance engine</h3>
+              <p>
+                BL and invoice checks for HS codes, taxes and document gaps
+                tuned to Kenya & East Africa rules — before containers land.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h3>Control Tower dashboard</h3>
+              <p>
+                See every container on one map. Sort by risk, lane or client.
+                Share a read-only view with your customers in one click.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- PRICING STRIP -->
-      <section class="section pricing" id="pricing">
-        <div class="pricing-inner">
-          <div class="pricing-copy">
+      <!-- VALUE STRIP -->
+      <section class="section section-value">
+        <div class="section-inner value-inner">
+          <div class="value-copy">
             <h2>One prevented delay pays for months of CorridorTrack.</h2>
-            <p>Demurrage at Mombasa can cost <strong>$150–300 per day</strong>. CorridorTrack alerts you before containers get stuck.</p>
+            <p>
+              Demurrage at Mombasa can cost $150–300 <span class="per-day">per day.</span>
+              CorridorTrack alerts you before containers get stuck.
+            </p>
           </div>
-          <div class="pricing-tiers">
-            <div class="pricing-pill">
-              <p class="pricing-name">Free</p>
-              <p class="pricing-price">$0</p>
-              <p class="pricing-note">Test the corridor intelligence. 3 containers, WhatsApp updates included.</p>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section section-pricing" id="pricing">
+        <div class="section-inner">
+          <h2 class="section-title">Plans for every operations team.</h2>
+          <p class="section-sub">
+            Start with one container on WhatsApp. Upgrade when you want a
+            Control Tower.
+          </p>
+
+          <div class="pricing-grid">
+            <!-- Free -->
+            <div class="pricing-card">
+              <h3>Free</h3>
+              <p class="price"><span class="price-main">$0</span> / month</p>
+              <p class="price-tagline">For single forwarders & pilots.</p>
+              <ul>
+                <li>Track via WhatsApp only</li>
+                <li>Up to 5 live containers</li>
+                <li>Basic status & ETA</li>
+              </ul>
+              <button class="pricing-btn" onclick="startOnWhatsApp()">
+                Start on WhatsApp
+              </button>
             </div>
-            <div class="pricing-pill pricing-pill--highlight">
-              <p class="pricing-name">Ops</p>
-              <p class="pricing-price">$29</p>
-              <p class="pricing-note">For active forwarders. Unlimited containers, delay risk, morning briefings.</p>
+
+            <!-- Ops -->
+            <div class="pricing-card pricing-card-highlight">
+              <div class="badge">Most popular</div>
+              <h3>Ops</h3>
+              <p class="price"><span class="price-main">$29</span> / month</p>
+              <p class="price-tagline">
+                For growing freight teams with multiple clients.
+              </p>
+              <ul>
+                <li>Unlimited WhatsApp lookups</li>
+                <li>Web dashboard view</li>
+                <li>Delay risk score & alerts</li>
+                <li>Exportable CSV for clients</li>
+              </ul>
+              <button class="pricing-btn primary" onclick="startOnWhatsApp()">
+                Talk to us on WhatsApp
+              </button>
             </div>
-            <div class="pricing-pill">
-              <p class="pricing-name">Control Tower</p>
-              <p class="pricing-price">$99</p>
-              <p class="pricing-note">For enterprises. Multi‑team dashboard, customs analytics and API.</p>
+
+            <!-- Control Tower -->
+            <div class="pricing-card">
+              <h3>Control Tower</h3>
+              <p class="price"><span class="price-main">$99</span> / month</p>
+              <p class="price-tagline">
+                For enterprise forwarders managing whole corridors.
+              </p>
+              <ul>
+                <li>Live control-tower map</li>
+                <li>Multi-user team access</li>
+                <li>Priority support</li>
+                <li>Custom SLAs & reporting</li>
+              </ul>
+              <button class="pricing-btn" onclick="startOnWhatsApp()">
+                Book a corridor audit
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHATSAPP CTA -->
-      <section class="section whatsapp-cta" id="whatsapp">
-        <div class="whatsapp-inner">
+      <!-- FOOTER CTA -->
+      <section class="section section-cta">
+        <div class="section-inner cta-inner">
           <div>
             <h2>Start with one container.</h2>
-            <p>Send us a BL or container number on WhatsApp. We'll show you the live status, ETA and delay risk — no signup, no training.</p>
+            <p>
+              Send us a BL or container number on WhatsApp. We’ll show you the
+              live status, ETA and delay risk — no signup, no training.
+            </p>
           </div>
-          <a class="whatsapp-button" id="whatsappButton" href="#" target="_blank" rel="noopener">
+          <a href="#" class="btn-whatsapp large" id="whatsappBottom">
             Start on WhatsApp
           </a>
         </div>
       </section>
+
     </main>
 
-    <footer class="site-footer">
-      <p>© 2025 CorridorTrack. Built for the Jebel Ali → Mombasa → Nairobi corridor.</p>
+    <footer class="footer">
+      <div class="section-inner footer-inner">
+        <span>© 2025 CorridorTrack. Built for the Jebel Ali → Mombasa → Nairobi corridor.</span>
+      </div>
     </footer>
+
   </div>
 
   <script src="script.js"></script>
