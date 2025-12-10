@@ -245,56 +245,7 @@ button {
 }
 
 /* map / route */
-.map-wrapper {
-  position: relative;
-  border-radius: 26px;
-  overflow: hidden;
-  background: #dbe9c4;
-  min-height: 320px;
-}
 
-.map-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0.9;
-}
-
-.route-line {
-  position: absolute;
-  left: 52%;
-  top: 15%;
-  bottom: 15%;
-  width: 4px;
-  background: #0b7b53;
-  border-radius: 3px;
-}
-
-.checkpoint {
-  position: absolute;
-  left: 52%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.checkpoint-dot {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: #059669;
-  border: 3px solid #c0f3dc;
-  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.6);
-}
-
-.checkpoint-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  color: #063726;
-}
 
 /* --- Sections shared --- */
 .section {
